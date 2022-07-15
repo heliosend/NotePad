@@ -35,11 +35,12 @@ public class NoteBook {
 
     // 以字符串数组的形式返回全部的条目
     public String[] display() {
-        String[] displayArrayList = new String[notes.size()];
-        for (int i = 0; i < notes.size(); i++) {
-            displayArrayList[i] = notes.get(i);
-        }
-        return displayArrayList;
+        String[] ArraylistForDisplay = new String[notes.size()];
+//        for (int i = 0; i < notes.size(); i++) {
+//            ArraylistForDisplay[i] = notes.get(i);
+//        }                                 //这是C语言模式下将链表转化为数组的方法，不使用 ↓
+        notes.toArray(ArraylistForDisplay); //这是ArrayList的固有方法，用于把链表转化为数组
+        return ArraylistForDisplay;
     }
 
 }
