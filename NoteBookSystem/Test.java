@@ -25,9 +25,10 @@ public class Test {
         }
         System.out.println("——————————————————————————————");
 
-        myNotebook.display();
-        for (int i = 0; i < myNotebook.display().length; i++) {
-            System.out.println(myNotebook.display()[i]);
+       //for(type element: array)  {    循环内容，对element进行操作    }
+        //For-Each 循环或者加强型循环，它能在不使用下标的情况下遍历数组。
+        for (String element : myNotebook.display()) {
+            System.out.println(element);
         }
     }
 }
